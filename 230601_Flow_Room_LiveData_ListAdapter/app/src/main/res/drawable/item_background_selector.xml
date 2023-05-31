@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/item_background_selected" android:state_selected="true"/> <!-- 선택되었을 때 배경 적용 -->
+    <item android:drawable="@android:color/transparent"/> <!-- 선택되지 않았을 때 배경 적용 -->
+</selector>
