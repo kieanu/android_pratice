@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn00"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn01"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn02"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn10"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn11"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn12"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn20"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn21"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn22"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:textSize="24sp" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Reset"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
