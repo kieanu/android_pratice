@@ -38,6 +38,9 @@ android {
 
 dependencies {
 
+    // 입체 디자인
+    implementation 'com.github.fornewid:neumorphism:0.3.2'
+
     // tedpermission coroutine
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
 
