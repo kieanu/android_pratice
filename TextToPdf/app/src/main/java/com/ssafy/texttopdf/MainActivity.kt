@@ -1,13 +1,21 @@
 package com.ssafy.texttopdf
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.DisplayMetrics
 import android.util.Log
+import android.view.Display
+import android.view.LayoutInflater
+import android.view.PixelCopy
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
-import com.itextpdf.io.font.FontProgramFactory
-import com.itextpdf.kernel.font.PdfFont
 import com.itextpdf.kernel.font.PdfFontFactory
 import com.itextpdf.kernel.geom.PageSize
 import com.itextpdf.kernel.pdf.PdfDocument
@@ -15,10 +23,8 @@ import com.itextpdf.kernel.pdf.PdfWriter
 import com.itextpdf.layout.Document
 import com.itextpdf.layout.element.Paragraph
 import com.itextpdf.layout.element.Table
-import com.itextpdf.layout.element.Text
 import com.itextpdf.layout.properties.HorizontalAlignment
 import com.itextpdf.layout.properties.TextAlignment
-import com.itextpdf.layout.properties.UnitValue
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -34,8 +40,47 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
             val text = name.text.toString()
 
-            if (text.isNotEmpty()) createPdfDocument(this, text)
+            if (text.isNotEmpty()) {
+                // createPdfDocument(this, text)
+                getXmlToJpg(this, this, R.layout.activity_main, "${externalCacheDir!!.absolutePath}/output.jpg")
+            }
         }
+    }
+    fun getXmlToJpg(activity:MainActivity, context: Context, xmlResId: Int, outPath: String): Boolean {
+        // XML 파일을 뷰로 인플레이트합니다.
+        val inflater = LayoutInflater.from(context)
+        val view = inflater.inflate(xmlResId, null)
+
+        // 뷰의 크기를 가져옵니다.
+        val displayMetrics = DisplayMetrics()
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            val display = context.getSystemService(WindowManager::class.java).currentWindowMetrics
+            display.bounds.also {
+                displayMetrics.widthPixels = it.width()
+                displayMetrics.heightPixels = it.height()
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            val display = activity.windowManager.defaultDisplay
+            @Suppress("DEPRECATION")
+            display.getMetrics(displayMetrics)
+        }
+        val viewWidth = displayMetrics.widthPixels
+        val viewHeight = displayMetrics.heightPixels
+
+        // 뷰를 비트맵으로 변환합니다.
+        val bitmap = Bitmap.createBitmap(viewWidth, viewHeight, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        canvas.drawColor(Color.WHITE)
+        view.draw(canvas)
+
+        // 비트맵을 JPG 파일로 저장합니다.
+        val outStream = FileOutputStream(outPath)
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream)
+        outStream.close()
+
+        return true
     }
 
     fun createPdfDocument(context: Context, text: String) {
