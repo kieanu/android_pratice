@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 프로그래스바 바깥쪽 반원 모양 -->
+    <item android:left="0dp" android:right="8dp" android:top="0dp" android:bottom="0dp">
+        <shape android:shape="ring" android:innerRadiusRatio="2.5"
+            android:thicknessRatio="16" android:useLevel="false">
+            <solid android:color="#F80C0C" /> <!-- 바깥쪽 색상 -->
+        </shape>
+    </item>
+    <!-- 프로그래스바 안쪽 반원 모양 -->
+    <item android:left="8dp" android:right="0dp" android:top="0dp" android:bottom="0dp">
+        <shape android:shape="ring" android:innerRadiusRatio="2.5"
+            android:thicknessRatio="16" android:useLevel="true">
+            <solid android:color="#2196F3" /> <!-- 안쪽 색상 -->
+        </shape>
+    </item>
+</layer-list>
