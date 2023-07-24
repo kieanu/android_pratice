@@ -16,18 +16,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".ui.home.SeatFragment">
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="0"
             android:id="@+id/item1"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_row="0"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:src="@drawable/ic_launcher_background"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill"/>
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="1"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -35,135 +35,120 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill"/>
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="6"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="7"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="8"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="9"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="10"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="11"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="12"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="13"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="14"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            tools:src="@drawable/ic_launcher_background" />
+            android:layout_gravity="fill" />
 
-        <ImageView
+        <com.ssafy.asaftest.ui.home.SeatView
             android:tag="15"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:src="@drawable/ic_launcher_foreground"
-            tools:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_foreground" />
     </GridLayout>
 
     <ImageView
@@ -174,7 +159,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
         android:src="@drawable/ic_launcher_background"
-        tools:src="@drawable/ic_dashboard_black_24dp" />
+        />
 
     <!--
     <com.google.android.material.button.MaterialButton
