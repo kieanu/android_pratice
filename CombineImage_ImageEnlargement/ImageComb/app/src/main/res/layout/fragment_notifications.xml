@@ -7,30 +7,12 @@
     android:background="@color/white"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <ImageView
-        android:id="@+id/fragment_sign_confirm_ivCancel"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:padding="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back_btn" />
-
-    <TextView
-        android:id="@+id/fragment_sign_confirm_page_tv1"
-        style="@style/appbar_text"
-        android:text="설정"
-        app:layout_constraintBottom_toBottomOf="@+id/fragment_sign_confirm_ivCancel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fragment_sign_confirm_ivCancel" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragment_sign_confirm_document"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/fragment_sign_confirm_btn_save"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_confirm_page_tv1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/fragment_sign_confirm_ivPreview"
@@ -48,24 +30,24 @@
             android:layout_width="68dp"
             android:layout_height="35dp"
             app:layout_constraintBottom_toBottomOf="@+id/guideline56"
-            app:layout_constraintEnd_toEndOf="@id/guideline14"/>
+            app:layout_constraintEnd_toEndOf="@id/guideline14" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvMonth1"
             style="@style/document_text"
             android:text="12"
-            android:textStyle="bold"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/guideline6"
-            app:layout_constraintBottom_toBottomOf="@id/guideline50"/>
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/guideline50"
+            app:layout_constraintEnd_toEndOf="@id/guideline6" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvCampus"
             style="@style/document_text"
             android:text="구미"
+            app:layout_constraintBottom_toBottomOf="@id/guideline51"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline1"
-            app:layout_constraintBottom_toBottomOf="@id/guideline51"/>
+            app:layout_constraintStart_toStartOf="@+id/guideline1" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvClass"
@@ -79,56 +61,56 @@
             android:id="@+id/fragment_sign_confirm_tvName1"
             style="@style/document_text"
             android:text="김주환"
-            app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintEnd_toEndOf="@+id/guideline14"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toTopOf="@+id/fragment_sign_confirm_tvCampus" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvName2"
             style="@style/document_text"
-            android:text="김주환"
             android:paddingBottom="1dp"
+            android:text="김주환"
+            app:layout_constraintBottom_toBottomOf="@id/guideline52"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline1"
-            app:layout_constraintBottom_toBottomOf="@id/guideline52"/>
+            app:layout_constraintStart_toStartOf="@+id/guideline1" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvMonth2"
+            style="@style/document_text"
             android:text="12"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/guideline4"
-            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvName2"/>
+            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvName2"
+            app:layout_constraintEnd_toEndOf="@id/guideline4" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvClassDay"
+            style="@style/document_text"
             android:text="22"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/guideline7"
-            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvMonth2"/>
+            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvMonth2"
+            app:layout_constraintEnd_toEndOf="@id/guideline7" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvAttendDay"
+            style="@style/document_text"
             android:text="20"
-            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvName2"
             app:layout_constraintEnd_toEndOf="@id/guideline12"
-            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvName2"/>
+            app:layout_constraintStart_toStartOf="@id/guideline10" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvMonth3"
+            style="@style/document_text"
             android:text="12"
-            app:layout_constraintEnd_toEndOf="@+id/guideline2"
-            app:layout_constraintBottom_toBottomOf="@id/guideline53"/>
+            app:layout_constraintBottom_toBottomOf="@id/guideline53"
+            app:layout_constraintEnd_toEndOf="@+id/guideline2" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvYear"
+            style="@style/document_text"
             android:text="2021"
-            app:layout_constraintEnd_toEndOf="@id/guideline9"
-            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvMonth4"/>
+            app:layout_constraintBottom_toBottomOf="@id/fragment_sign_confirm_tvMonth4"
+            app:layout_constraintEnd_toEndOf="@id/guideline9" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvMonth4"
@@ -138,19 +120,19 @@
             app:layout_constraintEnd_toEndOf="@id/guideline11" />
 
         <TextView
-            style="@style/document_text"
             android:id="@+id/fragment_sign_confirm_tvDay"
+            style="@style/document_text"
             android:text="14"
             app:layout_constraintBottom_toBottomOf="@+id/guideline54"
-            app:layout_constraintEnd_toEndOf="@id/guideline13"/>
+            app:layout_constraintEnd_toEndOf="@id/guideline13" />
 
         <TextView
             android:id="@+id/fragment_sign_confirm_tvName3"
             style="@style/document_text"
             android:text="김주환"
             app:layout_constraintBottom_toBottomOf="@id/guideline55"
-            app:layout_constraintStart_toStartOf="@+id/guideline8"
-            app:layout_constraintEnd_toEndOf="@id/guideline11"/>
+            app:layout_constraintEnd_toEndOf="@id/guideline11"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
 
 
         <!-- 세로 가이드라인 시작 -->
@@ -254,7 +236,6 @@
             app:layout_constraintGuide_percent="0.975" />
 
 
-
         <!-- 가로 Guildline 시작 -->
 
         <androidx.constraintlayout.widget.Guideline
@@ -313,9 +294,9 @@
         android:layout_height="wrap_content"
         android:text="저장"
         android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_confirm_document"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

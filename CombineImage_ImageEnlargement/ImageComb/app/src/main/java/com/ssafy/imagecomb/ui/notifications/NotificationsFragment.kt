@@ -8,10 +8,12 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.drawToBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.ssafy.imagecomb.Document
@@ -97,8 +99,6 @@ class NotificationsFragment : Fragment() {
     }
 
     fun initEvent() {
-        binding.fragmentSignConfirmIvCancel.setOnClickListener {
-        }
 
         binding.fragmentSignConfirmBtnSave.setOnClickListener {
             val sdf = SimpleDateFormat("yyyyMMddHHmmss") //년,월,일,시간 포멧 설정
@@ -106,20 +106,19 @@ class NotificationsFragment : Fragment() {
             val current_time = sdf.format(time) //String형 변수에 저장
             //Request_Capture(binding.fragmentSignConfirmDocument, current_time + "_capture");
 
-            Request_Capture(binding.fragmentSignConfirmDocument, "${document.campus}_${document.class_}반_${document.name}");
+            request_Capture(binding.fragmentSignConfirmDocument, "${document.campus}_${document.class_}반_${document.name}");
         }
     }
 
     // 특정 레이아웃 캡쳐해서 저장하기
-    fun Request_Capture(view: View?, title: String) {
+    fun request_Capture(view: View?, title: String) {
         if (view == null) { // Null Point Exception ERROR 방지
             println("::::ERROR:::: view == NULL")
             return
         }
 
         /* 캡쳐 파일 저장 */
-        view.buildDrawingCache() //캐시 비트 맵 만들기
-        val bitmap = view.drawingCache
+        val bitmap =  view.drawToBitmap()
 
         var fos: OutputStream? = null
 
@@ -140,7 +139,7 @@ class NotificationsFragment : Fragment() {
             val image = File(imagesDir, "$title.png")
             fos = FileOutputStream(image)
         }
-
+        Log.d("서명저장", "Request_Capture: ${Environment.DIRECTORY_PICTURES} ${MediaStore.MediaColumns.RELATIVE_PATH}")
         fos?.use {
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
         }
