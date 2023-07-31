@@ -77,7 +77,7 @@ class NotificationsFragment : Fragment() {
 
         val sdfYear = SimpleDateFormat("yyyy")
         val year = sdfYear.format(time)
-        document = Document("", "", "", "", "", "", "", "")
+        document = Document("12", "박현우", "부울경", "11", "31", "31", "12", "29")
 
         binding.apply {
             fragmentSignConfirmTvYear.text = year
